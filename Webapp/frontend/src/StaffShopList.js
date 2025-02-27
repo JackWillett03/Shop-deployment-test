@@ -17,7 +17,7 @@ const StaffShopList = () => {
   useEffect(() => { // Get all shops
     const fetchShops = async () => {
       try {
-        const response = await fetch("http://localhost:82/shops"); // GET request
+        const response = await fetch("${process.env.REACT_APP_API}/shops"); // GET request
         if (!response.ok) {
           throw new Error("Failed to fetch shops.");
         }
@@ -77,7 +77,7 @@ const StaffShopList = () => {
 
   const handleAddShop = async () => { // Add shops (Owners only)
     try {
-      const response = await fetch("http://localhost:82/shops", { // POST request
+      const response = await fetch("${process.env.REACT_APP_API}/shops", { // POST request
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +100,7 @@ const StaffShopList = () => {
 
   const handleUpdateShop = async (shopId) => { // Update shops (Owner only)
     try {
-      const response = await fetch(`http://localhost:82/shops/${shopId}`, { // PUT Request
+      const response = await fetch(`${process.env.REACT_APP_API}/shops/${shopId}`, { // PUT Request
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -126,7 +126,7 @@ const StaffShopList = () => {
     if (!confirmDelete) return;
 
     try {
-      const response = await fetch(`http://localhost:82/shops/${shopId}`, { // DELETE request
+      const response = await fetch(`${process.env.REACT_APP_API}/shops/${shopId}`, { // DELETE request
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`, // Include token to check staff role

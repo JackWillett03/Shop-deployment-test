@@ -15,7 +15,7 @@ const StaffLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:82/staff/login", { // POST request
+      const response = await fetch("${process.env.REACT_APP_API}/staff/login", { // POST request
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

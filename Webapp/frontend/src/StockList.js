@@ -15,7 +15,7 @@ const StockList = () => {
   useEffect(() => {
     const fetchStocks = async () => {
       try {
-        const response = await fetch(`http://localhost:82/stocks/shop/${shopId}`);
+        const response = await fetch(`${process.env.REACT_APP_API}/stocks/shop/${shopId}`);
         if (!response.ok) {
           throw new Error("Failed to fetch stock data.");
         }

@@ -23,7 +23,7 @@ const StockList = () => {
         }
 
         // Fetch stocks
-        const stockResponse = await fetch("http://localhost:82/stocks", { // GET Request for stock
+        const stockResponse = await fetch("${process.env.REACT_APP_API}/stocks", { // GET Request for stock
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -38,7 +38,7 @@ const StockList = () => {
         setStocks(stockData);
 
         // Fetch shops
-        const shopResponse = await fetch("http://localhost:82/shops", { // GET Request for shops
+        const shopResponse = await fetch("${process.env.REACT_APP_API}/shops", { // GET Request for shops
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

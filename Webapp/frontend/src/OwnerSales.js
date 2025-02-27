@@ -26,9 +26,9 @@ const OwnerSales = () => {
 
         // Get all sales, stocks, and shops
         const [salesResponse, stockResponse, shopResponse] = await Promise.all([
-            fetch("http://localhost:82/sales", { headers: { Authorization: `Bearer ${token}` } }),
-            fetch("http://localhost:82/stocks", { headers: { Authorization: `Bearer ${token}` } }),
-            fetch("http://localhost:82/shops", { headers: { Authorization: `Bearer ${token}` } }),
+            fetch("${process.env.REACT_APP_API}/sales", { headers: { Authorization: `Bearer ${token}` } }),
+            fetch("${process.env.REACT_APP_API}/stocks", { headers: { Authorization: `Bearer ${token}` } }),
+            fetch("${process.env.REACT_APP_API}/shops", { headers: { Authorization: `Bearer ${token}` } }),
         ]);
 
         if (!salesResponse.ok || !stockResponse.ok || !shopResponse.ok) {
@@ -80,7 +80,7 @@ const OwnerSales = () => {
     const updatePredictedSales = async (stockId) => {
         try {
         const token = localStorage.getItem("token"); // Get JWT from storage
-        const response = await fetch(`http://localhost:82/sales/updateSalesPrediction/${stockId}`, { // PUT Request
+        const response = await fetch(`${process.env.REACT_APP_API}/sales/updateSalesPrediction/${stockId}`, { // PUT Request
             method: "PUT",
             headers: {
             Authorization: `Bearer ${token}`,

@@ -24,7 +24,7 @@ const StaffManagement = () => {
     const fetchStaff = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await fetch(`http://localhost:82/staff/shop/${shopId}`, { // GET Request
+        const response = await fetch(`${process.env.REACT_APP_API}/staff/shop/${shopId}`, { // GET Request
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -106,7 +106,7 @@ const StaffManagement = () => {
     e.preventDefault();
     const staffData = { ...newStaff, ShopId: shopId }; // Set ShopId based on the one already selected
     try {
-      const response = await fetch('http://localhost:82/staff', { // POST Request
+      const response = await fetch('${process.env.REACT_APP_API}/staff', { // POST Request
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -148,7 +148,7 @@ const StaffManagement = () => {
   const handleDeleteStaff = async (staffId) => {
     try {
       const token = localStorage.getItem('token'); // Get JWT
-      const response = await fetch(`http://localhost:82/staff/${staffId}`, { // DELETE request
+      const response = await fetch(`${process.env.REACT_APP_API}/staff/${staffId}`, { // DELETE request
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`, // Send the authorisation header

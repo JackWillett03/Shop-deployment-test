@@ -24,7 +24,7 @@ const Profile = () => {
           return;
         }
 
-        const response = await fetch(`http://localhost:82/users/username/${username}`); // Get request to backend
+        const response = await fetch(`${process.env.REACT_APP_API}/users/username/${username}`); // Get request to backend
         if (!response.ok) {
           throw new Error("Failed to fetch user data.");
         }
@@ -85,7 +85,7 @@ const Profile = () => {
     }
 
     const username = localStorage.getItem("username"); // Get the username from storage
-    const response = await fetch(`http://localhost:82/users/username/${username}`, { // PUT request
+    const response = await fetch(`${process.env.REACT_APP_API}/users/username/${username}`, { // PUT request
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -117,7 +117,7 @@ const Profile = () => {
     }
 
     const username = localStorage.getItem("username"); // Get the username
-    const response = await fetch(`http://localhost:82/users/username/${username}`, { // PUT request
+    const response = await fetch(`${process.env.REACT_APP_API}/users/username/${username}`, { // PUT request
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -141,7 +141,7 @@ const Profile = () => {
     const username = localStorage.getItem("username"); // Get username
     const password = currentPassword; // Use the current password to make sure its the actual user
 
-    const response = await fetch(`http://localhost:82/users/username/${username}`, { // DELETE request
+    const response = await fetch(`${process.env.REACT_APP_API}/users/username/${username}`, { // DELETE request
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

@@ -54,7 +54,7 @@ const StaffStockList = () => {
   useEffect(() => {
     const fetchStocks = async () => {
       try {
-        const response = await fetch(`http://localhost:82/stocks/shop/${shopId}`);
+        const response = await fetch(`${process.env.REACT_APP_API}/stocks/shop/${shopId}`);
         if (!response.ok) {
           throw new Error("Failed to fetch stock data.");
         }
@@ -100,7 +100,7 @@ const StaffStockList = () => {
   // Add stock
   const handleAddStock = async () => {
     try {
-      const response = await fetch("http://localhost:82/stocks", { // POST request
+      const response = await fetch("${process.env.REACT_APP_API}/stocks", { // POST request
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -125,7 +125,7 @@ const StaffStockList = () => {
   // Update stock
   const handleUpdateStock = async (stockId) => {
     try {
-      const response = await fetch(`http://localhost:82/stocks/${stockId}`, { // PUT request
+      const response = await fetch(`${process.env.REACT_APP_API}/stocks/${stockId}`, { // PUT request
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -152,7 +152,7 @@ const StaffStockList = () => {
     if (!confirmDelete) return; 
 
     try {
-      const response = await fetch(`http://localhost:82/stocks/${stockId}`, { // DELETE Request
+      const response = await fetch(`${process.env.REACT_APP_API}/stocks/${stockId}`, { // DELETE Request
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`, // Include token to check roles
@@ -178,7 +178,7 @@ const StaffStockList = () => {
     const updatedStock = { ...stockToUpdate, CurrentStock: stockToUpdate.CurrentStock + 1 };
   
     try {
-      const response = await fetch(`http://localhost:82/stocks/${stockId}`, { // PUT Request
+      const response = await fetch(`${process.env.REACT_APP_API}/stocks/${stockId}`, { // PUT Request
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -207,7 +207,7 @@ const StaffStockList = () => {
     const updatedStock = { ...stockToUpdate, CurrentStock: stockToUpdate.CurrentStock - 1 };
   
     try {
-      const response = await fetch(`http://localhost:82/stocks/${stockId}`, { // PUT Request
+      const response = await fetch(`${process.env.REACT_APP_API}/stocks/${stockId}`, { // PUT Request
         method: "PUT",
         headers: {
           "Content-Type": "application/json",

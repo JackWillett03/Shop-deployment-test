@@ -51,7 +51,7 @@ const Sales = () => {
     // Get sales data
     const fetchSalesData = async () => {
         try {
-            const response = await fetch(`http://localhost:82/sales/stock/${stockId}`);
+            const response = await fetch(`${process.env.REACT_APP_API}/sales/stock/${stockId}`);
             const data = await response.json();
             console.log("Fetched Sales Data:", data);
 
@@ -71,7 +71,7 @@ const Sales = () => {
         if (!sold) return alert("Please enter the number of items sold.");
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch("http://localhost:82/sales", { // POST Reqest 
+            const response = await fetch("${process.env.REACT_APP_API}/sales", { // POST Reqest 
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -115,7 +115,7 @@ const Sales = () => {
 
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch(`http://localhost:82/sales/${editingSale._id}`, { // PUT request
+            const response = await fetch(`${process.env.REACT_APP_API}/sales/${editingSale._id}`, { // PUT request
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -147,7 +147,7 @@ const Sales = () => {
         if (isConfirmed) {
             try {
                 const token = localStorage.getItem("token"); // Get the jwt from storage
-                const response = await fetch(`http://localhost:82/sales/${saleId}`, { // DELETE Request
+                const response = await fetch(`${process.env.REACT_APP_API}/sales/${saleId}`, { // DELETE Request
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",
@@ -178,7 +178,7 @@ const Sales = () => {
 
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch(`http://localhost:82/sales/updatePlacement/${ShopId}`, { // PUT Request
+            const response = await fetch(`${process.env.REACT_APP_API}/sales/updatePlacement/${ShopId}`, { // PUT Request
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -201,7 +201,7 @@ const Sales = () => {
     const handleUpdateSalesPrediction = async (stockId) => {
         try {
             const token = localStorage.getItem("token"); // Get JWT from storage
-            const response = await fetch(`http://localhost:82/sales/updateSalesPrediction/${stockId}`, { // PUT Request
+            const response = await fetch(`${process.env.REACT_APP_API}/sales/updateSalesPrediction/${stockId}`, { // PUT Request
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
