@@ -8,5 +8,5 @@ const StaffSchema = new mongoose.Schema({
   IsOwner: {type: Boolean, default: false, },
 });
 
-const StaffLogins = mongoose.model('Staff', StaffSchema);
+const StaffLogins = mongoose.model('Staff', StaffSchema, 'Staff');
 module.exports = StaffLogins;  // Export so can be accessed by other node modules

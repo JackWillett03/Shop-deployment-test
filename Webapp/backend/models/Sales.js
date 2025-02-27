@@ -22,5 +22,5 @@ const SalesSchema = new mongoose.Schema({
   FourteenMonthsAgo: { type: Number, default: 0, },
 });
 
-const Sale = mongoose.model('Sales', SalesSchema);
+const Sale = mongoose.model('Sales', SalesSchema, 'Sales');
 module.exports = Sale; // Export so can be accessed by other node modules

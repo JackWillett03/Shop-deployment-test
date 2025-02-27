@@ -8,5 +8,5 @@ const StockListSchema = new mongoose.Schema({
   Tags: { type: [String], default: [], },
 });
 
-const Stock = mongoose.model('StockList', StockListSchema);
+const Stock = mongoose.model('StockList', StockListSchema, 'StockList');
 module.exports = Stock;// Export so can be accessed by other node modules

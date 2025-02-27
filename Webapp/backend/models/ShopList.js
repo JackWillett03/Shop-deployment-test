@@ -5,5 +5,5 @@ const ShopListSchema = new mongoose.Schema({
   Location: { type: String, required: true, trim: true, },
 });
 
-const Shops = mongoose.model('ShopList', ShopListSchema);
+const Shops = mongoose.model('ShopList', ShopListSchema, 'ShopList');
 module.exports = Shops; // Export so can be accessed by other node modules
