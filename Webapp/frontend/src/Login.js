@@ -38,7 +38,7 @@ const Login = () => {
         setError(result.message || "Login failed, please check your username and password.");
       }
     } catch (err) {
-      setError(result.message || "An error occurred while logging in.");
+      setError(err.message || "An error occurred while logging in.");
     }
   };
 

@@ -25,11 +25,11 @@ const Register = () => {
 
       if (!response.ok) { // Mainly to pick up error code if username or email are not unique
         const result = await response.json(); 
-        throw new Error(result.error || "Registration failed"); // Throw error message
+        throw new Error(result.message || "Registration failed"); // Throw error message
       }
       navigate("/login"); // If successful go to login page
     } catch (err) {
-      setError(result.error || "An error occurred while registering.");
+      setError(err.message || "An error occurred while registering.");
     }
   };
 
