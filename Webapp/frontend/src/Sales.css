@@ -1,0 +1,130 @@
+.salescontainer {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+  
+.backbuttons {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+  
+.backbutton:hover {
+    background-color: #0056b3;
+}
+  
+.actionbuttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+  
+.updatebutton,
+.deletebutton {
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+  
+.updatebutton {
+    background-color: #f0ad4e;
+    color: white;
+}
+  
+.updatebutton:hover {
+    background-color: #ec971f;
+}
+  
+.deletebutton {
+    background-color: #d9534f;
+    color: white;
+}
+  
+.deletebutton:hover {
+    background-color: #c9302c;
+}
+  
+.editform {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.editform input {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.editform button {
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px;
+}
+  
+.editform .updatebutton {
+    background-color: #007bff;
+    color: white;
+}
+  
+.editform .updatebutton:hover {
+    background-color: #0068d6;
+}
+  
+.editform .cancelbutton {
+    background-color: #007bff;
+    color: white;
+}
+  
+.editform .cancelbutton:hover {
+    background-color: #0068d6;
+}
+  
+.addsale {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+  
+.addsale input {
+    padding: 8px;
+    font-size: 16px;
+    width: 50%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
+.addsale button {
+    padding: 10px 20px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+  
+.addsale button:hover {
+    background-color: #4cae4c;
+}
+  

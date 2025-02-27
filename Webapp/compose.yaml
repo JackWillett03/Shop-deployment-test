@@ -1,0 +1,26 @@
+name: Stock-System
+services:
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "81:80"
+    depends_on:
+      - database
+      - backend
+  backend:
+    build:
+      context: ./backend
+    volumes:
+      - ./backend:/usr/src/app:rw
+      - /usr/src/app/node_modules
+    ports:
+      - "82:9000"
+    environment:
+      MONGO_URL: "mongodb://database:27017/appdb"
+    depends_on:
+      - database
+  database:
+    image: mongo
+    ports:
+      - 27017:27017

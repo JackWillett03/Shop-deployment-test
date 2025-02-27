@@ -1,0 +1,92 @@
+.staffmanagementpage {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Centralized Page Title */
+.staffmanagementpage h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Layout for Cards */
+.staffcardscontainer {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.cardsgrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+    width: 280px;
+}
+
+.cardbody h3 {
+    margin-bottom: 10px;
+}
+
+.cardbody p {
+    margin: 5px 0;
+}
+
+.deletebuttons {
+    background-color: #d9534f; /* Red color */
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.deletebuttons:hover {
+    background-color: #c9302c;
+}
+
+.addbutton {
+    margin-top: 20px;
+    background: #28a745;  /* Green color */
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.addstaffform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.addstaffform input,
+.addstaffform label {
+    width: 100%;
+}
+
+.addstaffform button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.addstaffform button.cancel {
+    background: #28a745; /* Green color for cancel button */
+}

@@ -1,0 +1,208 @@
+.shoplistcontainer {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin-bottom: 20px;
+}
+
+.menubutton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.menu {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+}
+
+.addstockbutton {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.addstockform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.addstockform input {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+    margin: 5px 0;
+}
+
+.addstockform button {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.addstockform button.cancel {
+    background: #d9534f;
+}
+
+.searchbar {
+    margin-bottom: 20px;
+}
+
+.searchbar input {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.stocksgrid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stockcard {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+}
+
+.stockactions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.stockactions button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.stockactions button:first-child {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+.stockactions button:last-child {
+    background-color: #d9534f;
+    color: white;
+}
+
+.updatestockform {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.updatestockform input {
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+}
+
+.updatestockform button {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.updatestockform button.cancel {
+    background: #d9534f;
+}
+
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.loginbutton {
+    padding: 10px;
+    top: 10px;
+    right: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+
+
+.stockinfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+
+  .stockbuttonscontainer {
+    display: flex;
+    gap: 10px;
+    align-items: center; 
+    margin-left: 10px;
+  }
+  
+  .stockbutton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stockbutton:hover {
+    background-color: #0056b3;
+  }
+  

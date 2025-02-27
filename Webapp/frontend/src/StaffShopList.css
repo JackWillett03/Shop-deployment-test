@@ -1,0 +1,139 @@
+.shoplistcontainer {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    margin-bottom: 20px;
+  }
+  
+  .menubutton {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .menu {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .menu ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu li {
+    margin-bottom: 10px;
+  }
+  
+  .menu button {
+    background: none;
+    border: none;
+    color: red;
+    cursor: pointer;
+  }
+  
+  .searchbar {
+    margin-bottom: 20px;
+  }
+  
+  .searchbar input {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .shopsgrid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .shopcard {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    position: relative;
+  }
+  
+  .shopactions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .shopactions button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .shopactions button:first-child {
+    background-color: #f0ad4e;
+    color: white;
+  }
+  
+  .shopactions button:last-child {
+    background-color: #d9534f;
+    color: white;
+  }
+  
+  .updateshop {
+    margin-top: 10px;
+    padding: 10px;
+    background: #eee;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .updateshop input {
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+  }
+  
+  .updateshop button {
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .addshop {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #eef;
+    border-radius: 8px;
+  }
+  
+  .addshop input {
+    padding: 8px;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .addshop button {
+    padding: 10px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  

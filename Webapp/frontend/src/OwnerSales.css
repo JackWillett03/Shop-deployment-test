@@ -1,0 +1,74 @@
+.salescontainer {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .backbuttons {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: auto;
+  }
+  
+  .searchbars {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .saleslist {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .salecard {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .updatesalesbutton {
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    width: auto; 
+    position: absolute;
+    top: 20px;
+    right: 20px; 
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  
+  .updatesalesbutton:hover {
+    background-color: #0056b3;
+  }
+  
+  .salecard h2 {
+    margin-bottom: 10px; 
+  }
+  
+  .salecard p {
+    margin: 5px 0;
+  }
+  

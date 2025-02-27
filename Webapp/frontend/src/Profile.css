@@ -1,0 +1,131 @@
+.profilecontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.pagename {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.backbutton {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+}
+
+.backbutton:hover {
+    background-color: #0056b3;
+}
+
+.formcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    max-width: 100%;
+    align-items: center;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.updateform input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.updateform button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.updateform button:hover {
+    background-color: blue;
+}
+
+.cancelbutton {
+    background-color: blue;
+    margin-top: 10px;
+}
+
+.cancelbutton:hover {
+    background-color: blue;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px; 
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; 
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+.logoutbutton {
+    width: 100%;
+    padding: 10px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.logoutbutton:hover {
+    background-color: #c82333;
+}
+
+.errormessage {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.deleteaccountcontainer {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.deletebutton {
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deletebutton:hover {
+    background-color: darkred;
+}
