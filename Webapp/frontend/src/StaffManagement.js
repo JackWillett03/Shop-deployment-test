@@ -106,7 +106,7 @@ const StaffManagement = () => {
     e.preventDefault();
     const staffData = { ...newStaff, ShopId: shopId }; // Set ShopId based on the one already selected
     try {
-      const response = await fetch('${process.env.REACT_APP_API}/staff', { // POST Request
+      const response = await fetch(`${process.env.REACT_APP_API}/staff`, { // POST Request
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

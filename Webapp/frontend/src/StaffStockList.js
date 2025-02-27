@@ -100,7 +100,7 @@ const StaffStockList = () => {
   // Add stock
   const handleAddStock = async () => {
     try {
-      const response = await fetch("${process.env.REACT_APP_API}/stocks", { // POST request
+      const response = await fetch(`${process.env.REACT_APP_API}/stocks`, { // POST request
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -71,7 +71,7 @@ const Sales = () => {
         if (!sold) return alert("Please enter the number of items sold.");
         try {
             const token = localStorage.getItem("token");
-            const response = await fetch("${process.env.REACT_APP_API}/sales", { // POST Reqest 
+            const response = await fetch(`${process.env.REACT_APP_API}/sales`, { // POST Reqest 
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

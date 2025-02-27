@@ -13,7 +13,7 @@ const ShopList = () => {
   useEffect(() => { // Get shop data when page is opened
     const fetchShops = async () => {
       try {
-        const response = await fetch("${process.env.REACT_APP_API}/shops"); // Get request to get shop data
+        const response = await fetch(`${process.env.REACT_APP_API}/shops`); // Get request to get shop data
         if (!response.ok) {
           throw new Error("Failed to fetch shops.");
         }

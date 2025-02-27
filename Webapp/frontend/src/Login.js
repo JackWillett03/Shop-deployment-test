@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("${process.env.REACT_APP_API}/users/login", { // POST request to users route
+      const response = await fetch(`${process.env.REACT_APP_API}/users/login`, { // POST request to users route
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

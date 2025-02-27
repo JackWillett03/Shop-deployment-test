@@ -26,9 +26,9 @@ const OwnerSales = () => {
 
         // Get all sales, stocks, and shops
         const [salesResponse, stockResponse, shopResponse] = await Promise.all([
-            fetch("${process.env.REACT_APP_API}/sales", { headers: { Authorization: `Bearer ${token}` } }),
-            fetch("${process.env.REACT_APP_API}/stocks", { headers: { Authorization: `Bearer ${token}` } }),
-            fetch("${process.env.REACT_APP_API}/shops", { headers: { Authorization: `Bearer ${token}` } }),
+            fetch(`${process.env.REACT_APP_API}/sales`, { headers: { Authorization: `Bearer ${token}` } }),
+            fetch(`${process.env.REACT_APP_API}/stocks`, { headers: { Authorization: `Bearer ${token}` } }),
+            fetch(`${process.env.REACT_APP_API}/shops`, { headers: { Authorization: `Bearer ${token}` } }),
         ]);
 
         if (!salesResponse.ok || !stockResponse.ok || !shopResponse.ok) {

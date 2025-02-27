@@ -17,7 +17,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault(); // Prevent default behaviour
     try {
-      const response = await fetch("${process.env.REACT_APP_API}/users/register", { // Send post request to the backend
+      const response = await fetch(`${process.env.REACT_APP_API}/users/register`, { // Send post request to the backend
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData), // Send data as json

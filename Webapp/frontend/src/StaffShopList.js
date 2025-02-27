@@ -17,7 +17,7 @@ const StaffShopList = () => {
   useEffect(() => { // Get all shops
     const fetchShops = async () => {
       try {
-        const response = await fetch("${process.env.REACT_APP_API}/shops"); // GET request
+        const response = await fetch(`${process.env.REACT_APP_API}/shops`); // GET request
         if (!response.ok) {
           throw new Error("Failed to fetch shops.");
         }
@@ -77,7 +77,7 @@ const StaffShopList = () => {
 
   const handleAddShop = async () => { // Add shops (Owners only)
     try {
-      const response = await fetch("${process.env.REACT_APP_API}/shops", { // POST request
+      const response = await fetch(`${process.env.REACT_APP_API}/shops`, { // POST request
         method: "POST",
         headers: {
           "Content-Type": "application/json",
