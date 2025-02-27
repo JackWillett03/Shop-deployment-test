@@ -29,7 +29,7 @@ const Register = () => {
       }
       navigate("/login"); // If successful go to login page
     } catch (err) {
-      setError("An error occurred while registering.");
+      setError(result.error || "An error occurred while registering.");
     }
   };
 
